@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div>
+	<button id="viewBtn">view 호출</button>
+</div>
+
+<div id="viewDiv"></div>
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		
+		$(document).on('click', '#viewBtn', function() {
+			$.ajax({
+			  url: "/iframe",
+			  success: function( response ) {
+			    $("#viewDiv").html(response);
+			  }
+			});
+		});
+			
+	});
+</script>
+
+</html>
