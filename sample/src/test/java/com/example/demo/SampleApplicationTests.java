@@ -11,6 +11,7 @@ public class SampleApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		Log.debug("=====");
 	}
 
 }
